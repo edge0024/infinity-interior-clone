@@ -1,143 +1,261 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #333;
-  }
-  
-  h1, h2, h3 {
-    color: #2E8B57; /* Green color */
-  }
-  
-  a {
-    text-decoration: none;
-    color: #2E8B57;
-  }
-  
-  .btn {
-    background: #2E8B57;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    display: inline-block;
-  }
-  
-  /* Navbar */
-  nav {
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: Arial;
+
+}
+
+.navbar{
     display: flex;
     justify-content: space-between;
+    height:  80px;
     align-items: center;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .nav-links {
-    list-style: none;
+    background-color: grey;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+    padding: 0px 50px;
+    
+    position: absolute; /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.logo{
+    
     display: flex;
-  }
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  /* Hero Section */
-  .hero {
-    background: url('https://via.placeholder.com/1500') no-repeat center center/cover;
+    align-items: left;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+}
+   
+p{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+.contact{
+    margin-left: 50px;
+    margin-top: 4px;
+    background-color: blue;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+/** home page  */
+
+/* corousal */
+body {
+    background: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel - 5 images in a row */
+.carousel {
     display: flex;
-    justify-content: center;
+    width: 500%;
+    position: absolute;
+    transition: transform 1s linear;
+}
+
+/* Carousel Images - Fullscreen */
+.carousel img {
+    width: 20%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Text Overlay (Static at Center) */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* About Page Styling */
+.about-container {
+    display: flex;
     align-items: center;
-    text-align: center;
-    color: #fff;
-  }
-  
-  .hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  /* Services Section */
-  .services {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .service-cards {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  
-  .card {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-  }
-  
-  /* Portfolio Section */
-  .portfolio {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  .gallery {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
-  
-  .gallery img {
-    border-radius: 10px;
-  }
-  
-  /* Contact Section */
-  .contact {
-    padding: 50px 20px;
-    text-align: center;
-  }
-  
-  form {
+    justify-content: center;
+    width: 80%;
+    margin: 120px auto 50px; /* Adjusted margin to avoid overlap with navbar */
+}
+
+/* Adjust spacing */
+.about-image {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  form input, form textarea {
-    width: 50%;
-    padding: 10px;
+    margin-left: 150px; /* 2x spacing on the left */
+    margin-right: 40px; /* 1x spacing between image and text */
+    gap: 25px;
+}
+
+.about-content {
+    flex: 2;
+    text-align: left;
+    margin-left: 100px; /* 1x spacing between image and text */
+    margin-right: 80px;
+}
+/* Founder Name (Below Image) */
+.founder-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Right Side - Text Content */
+.about-content {
+    flex: 2; /* Takes twice the space of the image */
+    text-align: left;
+
+}
+
+.about-content h1 {
+    font-size: 32px;
+    color: #228B22;
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    font-size: 24px;
+    color: #9370DB;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    width: 400px;
+}
+.new_apurv{
+    
+    border-top-right-radius: 50px;
+    height: 550px;
+    border-bottom-left-radius: 50px;
+}
+
+/* Free Consultancy Link */
+.consultancy-link {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #228B22;
+    padding: 12px 20px;
     border-radius: 5px;
-  }
-  
-  form button {
-    background: #2E8B57;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Footer */
-  footer {
-    background: #2E8B57;
-    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.consultancy-link:hover {
+    background-color: #1a6a1a;
+}
+
+/* statistics */
+.statistics {
+    background-color: lightblue;
+    height: 200px;
+    
+    /* Flexbox to center content */
+    display: flex;
+    justify-content: space-evenly; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.bold {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    list-style: none;
+    gap: 200px; /* Adjust spacing between items */
+    text-align: center; /* Ensures text is centered inside each item */
+}
+
+span{
+    font-size: 2rem;
+    font-weight: 700;
+   
+}
+/* What We Do Section */
+.What-we-do {
+    width: 80%;
+    margin: 80px auto;
     text-align: center;
+}
+
+.What-we-do h2 {
+    font-size: 2.5rem;
+    color: #228B22;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes in a row */
+    gap: 30px; /* Space between boxes */
+    justify-content: center;
     padding: 20px;
-  }
+}
+
+/* Individual Box Styling */
+/* Grid Box Styling */
+.grid div {
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    padding: 20px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    
+    /* Flexbox to center the logo and text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Logo in center, text at bottom */
+    padding-bottom: 20px; /* Extra space at bottom */
+}
+
+/* Icon Styling */
+.grid div i {
+    font-size: 50px; /* Adjust size of icon */
+    margin-top: auto; /* Push icon to the center */
+}
+
+/* Text Styling */
+.grid div span {
+    margin-bottom: 10px; /* Adds spacing at the bottom */
+}
+
+
+.grid div:hover {
+    transform: translateY(-5px);
+    background: #ffdab9; /* Peach accent on hover */
+}
